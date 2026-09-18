@@ -8,4 +8,4 @@ The first installation will run on a computer monitor. Setup and editing happen 
 
 A web app is the leading candidate. Browser support, prayer-time rules, the sun visualization, and reliability requirements remain decisions to resolve.
 
-The [GitHub issue tracker](https://github.com/Today20092/OpenMasjidDisplay/issues) holds the Wayfinder map and its decision tickets. This repository currently contains planning and contributor instructions, not a working application.
+Start with the [first-release specification map](https://github.com/Today20092/OpenMasjidDisplay/issues/1) and the [draft specification](docs/first-release.md). The map links the decisions that must settle before implementation. This repository currently contains planning and contributor instructions, not a working application.
