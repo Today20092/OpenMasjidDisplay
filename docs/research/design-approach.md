@@ -1,6 +1,6 @@
 # Design approach research
 
-Research for [decision ticket #3](https://github.com/Today20092/OpenMasjidDisplay/issues/3), checked 18 September 2026. This report recommends a direction; it does not approve a stack or implement a display.
+Research for [Which design approach fits the display and its setup controls?](https://github.com/Today20092/OpenMasjidDisplay/issues/3), checked 18 September 2026. This report recommends a direction; it does not approve a stack or implement a display.
 
 ## Recommendation
 
