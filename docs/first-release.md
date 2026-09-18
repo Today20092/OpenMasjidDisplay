@@ -26,6 +26,7 @@ Open Masjid Display should make prayer times and the passage of the day understa
 | What existing products already do well and which gaps deserve testing | [Existing display research](https://github.com/Today20092/OpenMasjidDisplay/issues/2) |
 | Whether Lumos, shadcn/ui, daisyUI, or native styling fits the display and controls | [Design approach research](https://github.com/Today20092/OpenMasjidDisplay/issues/3) |
 | What a browser app can reliably promise | [Browser feasibility research](https://github.com/Today20092/OpenMasjidDisplay/issues/4) |
+| Whether to adapt existing work and retain the current public name | [Project origin and naming](https://github.com/Today20092/OpenMasjidDisplay/issues/10) |
 | What viewers must understand first and which screen formats to support | [At-a-glance information hierarchy](https://github.com/Today20092/OpenMasjidDisplay/issues/5) |
 | Meaning and source of prayer times, next prayer, and sun markers | [Prayer and solar semantics](https://github.com/Today20092/OpenMasjidDisplay/issues/6) |
 | Actual visual composition and behavior | [Large-screen visual prototype](https://github.com/Today20092/OpenMasjidDisplay/issues/7) |
