@@ -19,6 +19,20 @@ Open Masjid Display should make prayer times and the passage of the day understa
 - Keep the project free and open source, with GitHub decision tickets and contributor instructions.
 - Users should not need to administer a server.
 
+## Agreed information hierarchy
+
+Recorded in [What should the first display help someone understand at a glance?](https://github.com/Today20092/OpenMasjidDisplay/issues/5):
+
+- Design the first layout for a standard landscape TV viewed from across a room. The preview computer does not set the layout's physical size or reading distance.
+- Next-prayer information is the first thing viewers should notice, alongside a prominent visualization of the sun's current position. The sun view should help answer whether sunrise or sunset is approaching or it is the middle of the day.
+- The remaining-time countdown is secondary to the prayer information and sun view.
+- Keep the complete daily prayer schedule visible. Each row distinguishes prayer start time from iqamah time.
+- Each mosque can configure iqamah for each prayer as an offset from the prayer start time, such as 10 or 20 minutes, or a fixed clock time. This requirement is confirmed; validation and next-event behavior still belong to the prayer semantics decision.
+- Give weather and the notice quiet, dedicated areas. They must not replace or obscure prayer information.
+- Weather should help viewers plan the day, prioritizing likely rain and useful heat/cold context. The user requested investigation of unusual temperatures; any comparison with normal conditions requires an evidenced baseline.
+
+Breezy Weather is a user-supplied design reference and NWS is a proposed data source. Neither app code/assets nor a weather provider has been selected. Exact forecast wording, time horizon, and temperature thresholds await research and the reliability decision.
+
 ## Decisions required before implementation
 
 | Question | Authoritative ticket |
@@ -31,6 +45,7 @@ Open Masjid Display should make prayer times and the passage of the day understa
 | Meaning and source of prayer times, next prayer, and sun markers | [Prayer and solar semantics](https://github.com/Today20092/OpenMasjidDisplay/issues/6) |
 | Actual visual composition and behavior | [Large-screen visual prototype](https://github.com/Today20092/OpenMasjidDisplay/issues/7) |
 | Setup, storage, offline use, weather failure, and recovery | [Reliability contract](https://github.com/Today20092/OpenMasjidDisplay/issues/8) |
+| Weather design inspiration and public forecast capabilities | [Weather signage research](https://github.com/Today20092/OpenMasjidDisplay/issues/11) |
 | Final acceptance scenarios, distribution, and license | [Specification readiness](https://github.com/Today20092/OpenMasjidDisplay/issues/9) |
 
 A web app is the leading platform candidate. No framework, component toolkit, prayer calculation library, weather provider, or hosting service has been selected.
@@ -41,7 +56,7 @@ These are proposed checks to refine through the decision tickets, not agreed thr
 
 - A viewer can identify the next prayer and its time from the intended viewing distance.
 - The sun visualization explains its relationship to prayer without confusing physical sun position with a configured congregation time.
-- Realistic long labels and notices fit the agreed monitor and banner formats without obscuring essential information.
+- Realistic long labels and notices fit the standard landscape TV layout without obscuring essential information. Wide banner layouts are deferred.
 - The display handles night, the final prayer of the day, date changes, time-zone changes, and missing solar events according to the agreed prayer rules.
 - The chosen foreground/background pairs pass measured contrast checks; essential state is understandable without relying on color or motion.
 - A network interruption leaves the promised core information usable and identifies unavailable or stale weather honestly.
@@ -49,7 +64,7 @@ These are proposed checks to refine through the decision tickets, not agreed thr
 
 ## Deferred
 
-Remote editing and multi-screen syncing are outside the first release. Native TV apps, automatic unattended startup, media slides, accounts, and installation-specific mosque features are not promised until explicitly scoped.
+Remote editing, multi-screen syncing, and wide banner layouts are outside the first release. Native TV apps, automatic unattended startup, media slides, accounts, and additional installation-specific mosque features are not promised until explicitly scoped.
 
 ## Ready-to-build gate
 
