@@ -1,6 +1,6 @@
 # Browser feasibility for the first release
 
-Research date: 2026-09-18. Resolves factual investigation in [#4](https://github.com/Today20092/OpenMasjidDisplay/issues/4), under [the Wayfinder map](https://github.com/Today20092/OpenMasjidDisplay/issues/1). These are recommendations, not accepted architecture decisions or tested implementation claims.
+Research date: 2026-09-18. Resolves factual investigation in [Can a browser app meet the first computer-monitor release requirements?](https://github.com/Today20092/OpenMasjidDisplay/issues/4), under [the Wayfinder map](https://github.com/Today20092/OpenMasjidDisplay/issues/1). These are recommendations, not accepted architecture decisions or tested implementation claims.
 
 ## Confirmed scope
 
