@@ -10,7 +10,7 @@ Open Masjid Display should make prayer times and the passage of the day understa
 
 ## Confirmed first-release scope
 
-- The first installation is the user's computer and monitor.
+- The first installation is the user's computer, used to preview a display designed for TVs viewed from across a room in mosques or similar spaces. The user's particular monitor does not define the layout or readability target.
 - Setup and editing happen on that computer. Remote editing and multi-screen syncing come later.
 - Show prayer times and clear information about the next prayer.
 - Include a sun visualization tied to the selected location, with prayer markers.
