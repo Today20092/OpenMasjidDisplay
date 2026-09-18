@@ -1,0 +1,42 @@
+# Existing prayer displays
+
+Research for [decision ticket #2](https://github.com/Today20092/OpenMasjidDisplay/issues/2), checked 18 September 2026. This records product evidence and proposals, not agreed product decisions.
+
+Prayer displays already offer announcements, offline operation, configurable layouts and congregation times. A useful first-release opportunity is a simpler computer setup and a display whose hierarchy works at a distance. This review does not establish an unserved market or prove that existing displays look bad. A fifth project discovered during the review also uses the name OpenMasjidDisplay and documents a sun/moon visualization.
+
+## Documented capabilities
+
+These are first-party claims, not independently tested reliability guarantees.
+
+| Product | Setup and prayer information | Context and customization | Offline and cost/licensing evidence |
+| --- | --- | --- | --- |
+| [MosqueOS](https://github.com/MosqueOS/Mosque-Prayer-Display-Screen) | Browser/PWA; documented setup copies a Google Sheet, grants an API account viewer access and deploys to Vercel. Optional administration needs a Google Cloud service account. Designed for 1080p TVs. | Announcements, upcoming-day slides, colors, prayer blackout. Live demo separates Begins and Jama'ah. | README describes an offline PWA and calls the project open source. A specific reuse license was not verified; public source alone is insufficient to settle reuse. No subscription price is established by the reviewed README; optional support is paid. |
+| [MAWAQIT](https://www.mawaqit.net/) | [Installation guide](https://help.mawaqit.net/en/articles/5768847-mawaqit-for-tv-installation-guide) requires registration and adding a mosque/home, then Android TV or a dedicated box. | Adjustable prayer times, themes, reminders and community messages; Adhan alert and Iqama countdown are explicitly documented. | Services are free and ad-free; hardware is separate. The [offline help article](https://help.mawaqit.net/en/articles/11791418-does-the-mawaqit-app-work-offline) distinguishes the TV app's power/cache caveats from the dedicated box. Initial setup and changes need connectivity. Current full-product source license was not established. |
+| [Masjidbox Screens](https://masjidbox.com/screens) | Account plus player; [device linking uses a dashboard PIN](https://masjidbox.com/blog/setup-masjidbox-player-for-mosque-displays). Supports calculated or uploaded Athan/Iqamah timetables. | Portrait/landscape layouts, colors, logos, scheduled content and separate room displays. | Vendor says screens can work offline between updates. [Plan documentation](https://support.masjidbox.com/how-much-does-the-silver-plan-cost-and-what-features-are-included-nabg9) lists free prayer features; announcements/media require Silver, currently EUR29/month or EUR319/year. No open-source license verified. |
+| [Masajid](https://masaj.id/) | [Download guide](https://masaj.id/download) supports an Android app or browser at my.masaj.id with a Masajid ID. Documents calculation methods, Athan reminders and adjustable Iqamah countdown. | Themes, branding, image/video slides and announcements; [help](https://masaj.id/help) describes optional Iqamah times beside prayer times. | Homepage markets free signage and offline operation, with internet needed for updates/streaming. Exact browser offline behavior and plan limits were not tested. [Terms](https://masaj.id/tos) restrict source extraction; do not call this open source. |
+| [OpenMasjid-Solutions/OpenMasjidDisplay](https://github.com/OpenMasjid-Solutions/OpenMasjidDisplay) | Separate project. Runs under OpenMasjidOS on a local computer and sends RTSP video to decoder boxes. Documents local calculation, Adhan/Iqamah, scheduled changes and CSV timetables. | Modern and Simple layouts, portrait/landscape, notices, live sun and moon, configurable colors and prayer-state screens. | Repository identifies AGPL-3.0 and claims on-device prayer calculation without internet or subscription. Deployment/recovery were not tested. |
+
+## Observation versus unknowns
+
+- The [MosqueOS live demo](https://mosque-prayer-display-screen.vercel.app/) loaded in the browser. Its accessibility tree showed five prayer rows, Begins/Jama'ah/Tomorrow columns, a phone-silencing notice, sunrise and three Jummah times. This verifies rendered information structure, not visual beauty or prayer-time accuracy.
+- Screenshot capture was unavailable in the research subagent. Official Masjidbox preview image retrieval also failed. MAWAQIT supplied a public image URL but no inspectable image in the tool response. No visual ranking, contrast measurement or viewing-distance result is claimed. Public references for later inspection: [Masjidbox preview](https://masjidbox.com/screens), [MAWAQIT TV page](https://www.mawaqit.net/), [Masajid demo entry](https://masaj.id/).
+- Weather behavior was not verified for the four requested products. Sun/daylight explanation was not established for them either. These are unknowns, not evidence of absence. The additional OpenMasjidDisplay explicitly documents sun/moon movement; whether it explains prayer markers or daylight well needs visual testing.
+- No accounts were created, devices installed or offline/restart trials run. Vendor offline claims can differ by player, cached content and power state. Pricing is a dated snapshot; free use and an open-source license are different facts.
+
+## Testable first-release hypotheses
+
+These proposed tests follow the user's monitor-first scope, weather and one notice, with syncing deferred.
+
+1. A clear next-prayer heading plus a restrained daily schedule lets a new viewer identify the next prayer and its time within five seconds. Compare two mockups at the user's actual monitor and viewing distance; do not count close-up readability as success.
+2. A labeled daylight diagram with prayer markers improves answers to "Where are we in the day?" and "What happens next?" compared with the same layout without it. Check that viewers distinguish diagram context from authoritative prayer/congregation times. Sun animation alone is not a novel feature.
+3. Keeping weather and one short notice in secondary positions preserves five-second prayer recognition. Repeat with a long notice and unavailable/stale weather; reject designs where either hides the prayer information.
+4. One-computer setup without accounts, deployment or remote pairing lets a first-time user reach a correct display in ten minutes. Test location/timezone, prayer convention and any local timetable adjustment explicitly; easier setup must not silently select the wrong times.
+5. Clear stale-data states plus usable saved prayer information survive an internet interruption and browser restart. Test those as separate cases; displaying old weather without a timestamp is not recovery.
+
+## Naming and follow-up
+
+The exact repository name already exists at [OpenMasjid-Solutions/OpenMasjidDisplay](https://github.com/OpenMasjid-Solutions/OpenMasjidDisplay), whose scope includes prayer displays and sun/moon motion. This creates a discoverability/confusion concern, not a legal conclusion. Keep the user's selected name for now and ask for a naming decision before public branding. Compare its installation flow and visual output before claiming differentiation.
+
+Its repository exposes `server/`, `web/`, `docker-compose.yml` and a Dockerfile, and describes an OpenMasjidOS controller plus RTSP output. That documented deployment adds administration beyond the user's desired single-computer browser setup. It does not establish that its display cannot be reused separately. Before choosing build versus adapt, inspect the web timetable renderer, sun/moon behavior, prayer calculation and configuration dependencies, and determine whether they can run without the controller. Those module boundaries were not audited here. AGPL-3.0 is the repository's stated license; any reuse proposal must identify the actual files and applicable terms rather than assuming that the UI is freely copyable without obligations. MosqueOS's browser model is another adaptation candidate, but its documented Sheets/deployment setup and unverified reuse license need resolution first.
+
+Resolve this ticket as a bounded documentary review. The visual decision ticket still needs actual mockups and a viewing-distance check; research has not selected a framework or established an aesthetic winner.
