@@ -1,6 +1,6 @@
 # Existing prayer displays
 
-Research for [decision ticket #2](https://github.com/Today20092/OpenMasjidDisplay/issues/2), checked 18 September 2026. This records product evidence and proposals, not agreed product decisions.
+Research for [What can existing prayer displays teach us, and which gaps are evidenced?](https://github.com/Today20092/OpenMasjidDisplay/issues/2), checked 18 September 2026. This records product evidence and proposals, not agreed product decisions.
 
 Prayer displays already offer announcements, offline operation, configurable layouts and congregation times. A useful first-release opportunity is a simpler computer setup and a display whose hierarchy works at a distance. This review does not establish an unserved market or prove that existing displays look bad. A fifth project discovered during the review also uses the name OpenMasjidDisplay and documents a sun/moon visualization.
 
