@@ -122,7 +122,18 @@ Future seasonal layouts should support Ramadan and mosque-specific activities su
 
 ## Setup and offline behavior
 
-The user approved saving settings locally on the display computer, keeping prayer times working without internet after initial setup, and providing a settings backup file for export and restoration. Weather must clearly indicate stale data. Exact browser support, offline reload requirements, startup/sleep behavior, clock reliability, and weather freshness thresholds remain to be settled in the setup decision.
+The user approved saving settings locally on the display computer, keeping prayer times working without internet after initial setup, and providing a settings backup file for export and restoration. Weather must clearly indicate stale data.
+
+The user approved a **Start display** action to enter fullscreen, manual reopening after a computer restart, and instructions for keeping the computer awake. Automatic startup is deferred. After successful initial setup, the display must reopen without an internet connection, not merely continue while an existing tab remains open.
+
+Acceptance checks for the approved behavior:
+- Save a location, calculation settings, iqamah times and notice; reload and confirm they persist.
+- Export settings and restore them into a fresh setup; reject an invalid backup with an explanation before changing existing settings.
+- After initial offline preparation completes, disconnect the network, close and reopen the app, and confirm the saved configuration and calculated prayer schedule remain usable.
+- Start display enters fullscreen following the user's click; if fullscreen is unavailable, explain how to continue in the browser.
+- Document manual reopening and operating-system sleep settings; do not promise automatic startup or unconditional prevention of sleep.
+
+Exact browser support, clock reliability, and weather freshness thresholds remain to be settled in the setup decision.
 
 ## Ready-to-build gate
 
