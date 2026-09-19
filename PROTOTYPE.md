@@ -1,12 +1,15 @@
 # Display design study
 
-Throwaway visual study for [Which large-screen composition makes prayer and daylight easiest to read?](https://github.com/Today20092/OpenMasjidDisplay/issues/7). No production application exists yet.
+Throwaway visual study for [Which large-screen composition makes prayer and daylight easiest to read?](https://github.com/Today20092/OpenMasjidDisplay/issues/7). No production application exists yet. This is the second review iteration, following the user's preference for A and B and B's solar-chart placement.
 
-Run `npm run preview`, then open http://127.0.0.1:4178/?variant=A . No packages need installing. Alternatively open `prototype.html` directly. Use A, B or C in the variant parameter, or the floating arrow controls.
+Run `npm run preview`, then open http://127.0.0.1:4178/?variant=A . No packages need installing. Alternatively open `prototype.html` directly. Use A or B in the variant parameter, or the floating arrow controls.
 
-- A, Horizon: dark solar landscape with a vertical timetable.
-- B, Daylight: light editorial layout with a full-width five-prayer schedule.
-- C, Prayer room: dedicated next-prayer panel with solar view and schedule alongside.
+- A, Horizon: B's larger solar-led composition in the dark palette.
+- B, Daylight: the same refined composition in a light palette.
+
+The initial three structurally different compositions, including C, are preserved at commit `f72fd9e26b24a8555ee83eab172735b5e84383c3`. The user rejected C's oversized prayer-name focus. These two refinements intentionally compare dark/light treatments within the preferred composition.
+
+The analog countdown uses a 12-hour clock: hands show sample current time, the shaded clockwise interval runs to the target dot, and text retains the exact remaining duration. The event switches to iqamah in the dawn sample when enabled. This is a design proposal, not yet selected. Built-in checks cover the 24-minute, 13-minute, 446-minute and overnight 498-minute intervals.
 
 Controls preview dawn/afternoon/night, rain/clear/snow/unavailable weather, long notice, optional iqamah and optional motion. Motion starts off and respects reduced-motion preferences. TV view hides study controls; Escape restores them. URL parameters preserve the preview state.
 
@@ -16,7 +19,11 @@ Append `&check=1` to run the small built-in behavior checks, or run `runChecks()
 
 The user must judge layout and viewing-distance readability before the visual decision resolves. Do not promote this code directly into production.
 
-## Verification
+## Second-review verification
+
+Built-in checks pass for both refined variants and all three scenes, including the four analog intervals. Inspected the short afternoon wedge and the overnight wedge. At a 1920x1080 CSS viewport, both variants retain all five prayer entries with iqamah disabled, a long notice and unavailable weather; measured hero/schedule/context/notice bounds do not overlap. Physical TV viewing-distance readability still needs human review.
+
+## Initial-review verification
 
 Inspected all three rendered compositions, including night, dawn, a long notice and unavailable weather. Built-in checks pass for all three variants and all three scenes; the dawn fixture advances to Dhuhr when iqamah is disabled. Verified mouse/arrow-key switching updates the URL.
 
