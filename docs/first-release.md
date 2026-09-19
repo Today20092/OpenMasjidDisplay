@@ -133,7 +133,9 @@ Acceptance checks for the approved behavior:
 - Start display enters fullscreen following the user's click; if fullscreen is unavailable, explain how to continue in the browser.
 - Document manual reopening and operating-system sleep settings; do not promise automatic startup or unconditional prevention of sleep.
 
-Exact browser support, clock reliability, and weather freshness thresholds remain to be settled in the setup decision.
+The user approved Chrome and Edge on Windows as the initial browser targets. Record the tested browser versions for each release. Hide weather effects when their forecast expires, and clearly identify stale weather information. The provider integration must define and test forecast validity from its timestamps before release.
+
+Setup must explain that the configured location determines the time zone but does not correct a wrong computer clock. Accurate system date/time is required for reliable prayer-event timing; offline operation cannot independently verify it.
 
 ## Ready-to-build gate
 
