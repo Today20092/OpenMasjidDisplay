@@ -51,11 +51,13 @@ Recorded during [What exactly do prayer times, next prayer, and sun markers mean
 - Keep every configured Friday service visible. The proposed headline sequence follows each upcoming khutbah and optional iqamah, then the next daily prayer; visibility is explicitly confirmed, while the transition sequence still needs final confirmation.
 - After Isha's iqamah, or Isha start when iqamah is disabled, show "Tomorrow's Fajr" prominently. Keep today's full schedule until midnight in the configured location's time zone; at midnight switch the schedule to the new day and remove the "Tomorrow" label.
 
-Timetable import has not been selected for the first release. Concrete calculation options, high-latitude prayer policy, Friday headline transitions and missing solar-event presentation remain to be resolved. Clock verification belongs to the reliability decision.
+Timetable import has not been selected for the first release. Concrete calculation options, high-latitude prayer policy and Friday headline transitions remain to be resolved. Clock verification belongs to the reliability decision.
 
 ## Solar visualization direction
 
 The user favors an extended half-arc, roughly a semicircle with additional dawn/dusk portions below a visible horizon, rather than a full circle. It should show the sun's current position and help viewers understand the approach of sunrise, midday and sunset. Sunrise/sunset markers and prayer markers remain distinct. Adjusting a prayer schedule must not change the calculated sun position.
+
+When a valid solar calculation establishes that sunrise or sunset does not occur on the selected local date, show "No sunrise today" or "No sunset today" respectively and omit that event's marker. Do not fabricate a time or use this label for a calculation/data failure. Keep the mosque's configured prayer schedule separate; this display fallback does not choose a high-latitude prayer calculation rule.
 
 The precise geometry, projection and behavior when the sun is outside the visible twilight portion remain prototype decisions. The user suggested a moon as a possible nighttime treatment, not an agreed requirement. A symbolic night icon must be distinct from a claim about actual lunar position; a sun-to-moon substitution along the same path has not been approved.
 
