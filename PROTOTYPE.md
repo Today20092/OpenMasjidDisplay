@@ -9,7 +9,7 @@ Run `npm run preview`, then open http://127.0.0.1:4178/?variant=A . No packages 
 
 The initial three structurally different compositions, including C, are preserved at commit `f72fd9e26b24a8555ee83eab172735b5e84383c3`. The user rejected C's oversized prayer-name focus. These two refinements intentionally compare dark/light treatments within the preferred composition.
 
-The analog countdown uses a 12-hour clock: hands show sample current time, the shaded clockwise interval runs to the target dot, and text retains the exact remaining duration. The event switches to iqamah in the dawn sample when enabled. This is a design proposal, not yet selected. Built-in checks cover the 24-minute, 13-minute, 446-minute and overnight 498-minute intervals.
+The countdown now uses a shrinking horizontal bar, following the user's clarification that they did not want a clock face. It represents the remaining fraction of the interval from the preceding event to the next prayer or iqamah. Exact duration remains beside it. With Motion enabled it drains at real-time speed from the illustrative starting state; reduced-motion pauses it. Sample numbers remain fixed, so this is a visual study, not a running clock. Built-in checks cover four durations and short/long remaining fractions.
 
 Controls preview dawn/afternoon/night, rain/clear/snow/unavailable weather, long notice, optional iqamah and optional motion. Motion starts off and respects reduced-motion preferences. TV view hides study controls; Escape restores them. URL parameters preserve the preview state.
 
