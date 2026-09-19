@@ -27,7 +27,7 @@ Recorded in [What should the first display help someone understand at a glance?]
 - Next-prayer information is the first thing viewers should notice, alongside a prominent visualization of the sun's current position. The sun view should help answer whether sunrise or sunset is approaching or it is the middle of the day.
 - The remaining-time countdown is secondary to the prayer information and sun view.
 - Keep the complete daily prayer schedule visible. When iqamah is enabled, each row distinguishes prayer start time from iqamah time.
-- Each mosque can configure iqamah for each prayer as an offset from the prayer start time, such as 10 or 20 minutes, or a fixed clock time. This requirement is confirmed; validation and next-event behavior still belong to the prayer semantics decision.
+- Each mosque can configure iqamah for each prayer as an offset from the prayer start time, such as 10 or 20 minutes, or a fixed clock time. Validation rules remain part of the prayer semantics decision.
 - Give weather and the notice quiet, dedicated areas. They must not replace or obscure prayer information.
 - Weather should help viewers plan the day, prioritizing likely rain and useful heat/cold context. The user requested investigation of unusual temperatures; any comparison with normal conditions requires an evidenced baseline.
 
@@ -38,13 +38,15 @@ Breezy Weather is a user-supplied design reference and NWS is a proposed data so
 Recorded during [What exactly do prayer times, next prayer, and sun markers mean?](https://github.com/Today20092/OpenMasjidDisplay/issues/6), which remains open:
 
 - Show prayer start and iqamah together in the prominent prayer summary when iqamah is enabled. Do not hide either time as the next event changes; people need both to plan their arrival.
-- Do not show a congregation-starting interstitial at iqamah. The user explicitly rejected that announcement. The exact point for advancing to the next prayer and the secondary countdown target remain under discussion.
+- Keep the prominent prayer until its iqamah time, then advance directly to the next prayer without a congregation-starting message. When iqamah is disabled, advance at prayer start.
+- The secondary countdown targets prayer start first, then iqamah, with an explicit target label. Both absolute times remain visible in the prominent summary when iqamah is enabled.
 - Calculate prayer start times from a location and user-selected calculation settings. Permit individual adjustments to match the mosque's approved timetable.
 - Support location lookup and exact latitude/longitude entry. A location-search provider and its offline behavior remain implementation decisions.
 - Make iqamah optional. With it disabled, show prayer start times without an empty iqamah column or iqamah-only labels.
 - Preserve the previously agreed per-prayer iqamah offset or fixed-clock-time options.
+- Support an optional configured Jumu'ah time on Fridays. When it is not configured, use the ordinary Dhuhr schedule. The meaning of the configured Friday time and support for multiple services remain to be settled.
 
-Timetable import has not been selected for the first release. Calculation-method options, time-zone behavior, next-event transitions, exceptional days and solar/night semantics remain to be resolved.
+Timetable import has not been selected for the first release. Calculation-method options, time-zone behavior, overnight rollover, Friday details and solar/night semantics remain to be resolved.
 
 ## Decisions required before implementation
 
@@ -78,6 +80,8 @@ These are proposed checks to refine through the decision tickets, not agreed thr
 ## Deferred
 
 Remote editing, multi-screen syncing, and wide banner layouts are outside the first release. Native TV apps, automatic unattended startup, media slides, accounts, and additional installation-specific mosque features are not promised until explicitly scoped.
+
+Future seasonal layouts should support Ramadan and mosque-specific activities such as Taraweeh. The user explicitly wants these later; the first release does not include dedicated Ramadan/Taraweeh layouts.
 
 ## Ready-to-build gate
 
