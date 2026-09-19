@@ -26,12 +26,25 @@ Recorded in [What should the first display help someone understand at a glance?]
 - Design the first layout for a standard landscape TV viewed from across a room. The preview computer does not set the layout's physical size or reading distance.
 - Next-prayer information is the first thing viewers should notice, alongside a prominent visualization of the sun's current position. The sun view should help answer whether sunrise or sunset is approaching or it is the middle of the day.
 - The remaining-time countdown is secondary to the prayer information and sun view.
-- Keep the complete daily prayer schedule visible. Each row distinguishes prayer start time from iqamah time.
+- Keep the complete daily prayer schedule visible. When iqamah is enabled, each row distinguishes prayer start time from iqamah time.
 - Each mosque can configure iqamah for each prayer as an offset from the prayer start time, such as 10 or 20 minutes, or a fixed clock time. This requirement is confirmed; validation and next-event behavior still belong to the prayer semantics decision.
 - Give weather and the notice quiet, dedicated areas. They must not replace or obscure prayer information.
 - Weather should help viewers plan the day, prioritizing likely rain and useful heat/cold context. The user requested investigation of unusual temperatures; any comparison with normal conditions requires an evidenced baseline.
 
 Breezy Weather is a user-supplied design reference and NWS is a proposed data source. Neither app code/assets nor a weather provider has been selected. Exact forecast wording, time horizon, and temperature thresholds await research and the reliability decision.
+
+## Confirmed prayer behavior
+
+Recorded during [What exactly do prayer times, next prayer, and sun markers mean?](https://github.com/Today20092/OpenMasjidDisplay/issues/6), which remains open:
+
+- Show prayer start and iqamah together in the prominent prayer summary when iqamah is enabled. Do not hide either time as the next event changes; people need both to plan their arrival.
+- Do not show a congregation-starting interstitial at iqamah. The user explicitly rejected that announcement. The exact point for advancing to the next prayer and the secondary countdown target remain under discussion.
+- Calculate prayer start times from a location and user-selected calculation settings. Permit individual adjustments to match the mosque's approved timetable.
+- Support location lookup and exact latitude/longitude entry. A location-search provider and its offline behavior remain implementation decisions.
+- Make iqamah optional. With it disabled, show prayer start times without an empty iqamah column or iqamah-only labels.
+- Preserve the previously agreed per-prayer iqamah offset or fixed-clock-time options.
+
+Timetable import has not been selected for the first release. Calculation-method options, time-zone behavior, next-event transitions, exceptional days and solar/night semantics remain to be resolved.
 
 ## Decisions required before implementation
 
