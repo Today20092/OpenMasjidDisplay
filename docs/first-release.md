@@ -69,6 +69,8 @@ The agreed forecast horizon is the next three hours, labelled explicitly. Evalua
 
 ## Requested moon and fasting context
 
+Confirmed calendar approach: calculate the moon graphic, illuminated percentage and full-moon notices astronomically. Determine White Days reminders from dates 13, 14 and 15 in the selected Hijri calendar, with adjustment to match the mosque's calendar. Do not assign the astronomical full-moon date to Hijri day 14 or derive fasting dates from illumination. Specific calendar options and default, adjustment controls, and reminder timing remain to be specified.
+
 The user requested a moon-phase visual with the percentage illuminated and full-moon context, an indication of whether the White Days are approaching or current, and optional advance reminders for Monday/Thursday fasting. The explicit examples are a Sunday reminder for Monday and a Wednesday reminder for Thursday. Present these as voluntary observances, not commands to fast.
 
 The moon visual and observance labels have separate meanings. [Lunar research](https://github.com/Today20092/OpenMasjidDisplay/issues/12) establishes that White Days refer to Hijri dates 13, 14 and 15 rather than an astronomical illumination threshold. The physical phase and illuminated percentage must not be changed to match the calendar badge. The human decision must choose the Hijri calendar, local adjustment behavior, reminder lead time/window, sunset versus civil-day wording, exceptional-date handling and first-release placement. Proposed reminder exceptions and unconfirmed-calendar behavior are documented in the research, not yet approved as product policy.
