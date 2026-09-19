@@ -44,10 +44,22 @@ Recorded during [What exactly do prayer times, next prayer, and sun markers mean
 - Support location lookup and exact latitude/longitude entry. A location-search provider and its offline behavior remain implementation decisions.
 - Make iqamah optional. With it disabled, show prayer start times without an empty iqamah column or iqamah-only labels.
 - Preserve the previously agreed per-prayer iqamah offset or fixed-clock-time options.
-- Support optional Jumu'ah services on Fridays, explicitly labelled "Khutbah starts", including multiple services. When none is configured, use the ordinary Dhuhr schedule. How separate Friday iqamah times appear remains to be settled.
+- Support a configurable list of optional Jumu'ah services on Fridays. Each service has a "Khutbah starts" time and can have its own iqamah time. Support one or several services, including three or more, rather than a single mosque-wide Friday iqamah. When none is configured, including displays outside a mosque, use the ordinary Dhuhr schedule.
 - After Isha's iqamah, or Isha start when iqamah is disabled, show "Tomorrow's Fajr" prominently. Keep today's full schedule until midnight in the configured location's time zone; at midnight switch the schedule to the new day and remove the "Tomorrow" label.
 
-Timetable import has not been selected for the first release. Calculation-method options, time-zone setup and daylight-saving behavior, Friday iqamah details, validation and solar/night semantics remain to be resolved.
+Timetable import has not been selected for the first release. Calculation-method options, time-zone setup and daylight-saving behavior, validation, Friday service transitions and missing solar-event behavior remain to be resolved.
+
+## Solar visualization direction
+
+The user favors an extended half-arc, roughly a semicircle with additional dawn/dusk portions below a visible horizon, rather than a full circle. It should show the sun's current position and help viewers understand the approach of sunrise, midday and sunset. Sunrise/sunset markers and prayer markers remain distinct. Adjusting a prayer schedule must not change the calculated sun position.
+
+The precise geometry, projection and behavior when the sun is outside the visible twilight portion remain prototype decisions. The user suggested a moon as a possible nighttime treatment, not an agreed requirement. A symbolic night icon must be distinct from a claim about actual lunar position; a sun-to-moon substitution along the same path has not been approved.
+
+## Proposed weather backgrounds
+
+The user requested exploration of an optional weather-responsive background: subtle rain or snow effects, or a sunny treatment, as a visual cue to expected weather. This is a prototype candidate; first-release inclusion and default settings remain undecided.
+
+Evaluate the effect behind a stable, readable prayer foreground, with a static/off option and reduced-motion behavior. Keep an explicit text forecast and its time window so the background does not imply rain is occurring now when it represents later conditions. Proposed safeguards are to use a neutral background when forecast data is stale/unavailable and to keep weather styling separate from the sun's astronomical position. Forecast horizon, condition-selection rules, intensity and fallback policy require agreement in the weather/reliability decision.
 
 ## Decisions required before implementation
 
