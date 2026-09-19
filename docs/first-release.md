@@ -31,7 +31,7 @@ Recorded in [What should the first display help someone understand at a glance?]
 - Give weather and the notice quiet, dedicated areas. They must not replace or obscure prayer information.
 - Weather should help viewers plan the day, prioritizing likely rain and useful heat/cold context. The user requested investigation of unusual temperatures; any comparison with normal conditions requires an evidenced baseline.
 
-Breezy Weather is a user-supplied design reference and NWS is a proposed data source. Neither app code/assets nor a weather provider has been selected. Exact forecast wording, time horizon, and temperature thresholds await research and the reliability decision.
+Breezy Weather is a user-supplied design reference and NWS is a proposed data source. Neither app code/assets nor a weather provider has been selected. The user selected the next three hours as the weather-background forecast window. Exact forecast wording, condition selection and temperature thresholds remain part of the reliability decision.
 
 ## Confirmed prayer behavior
 
@@ -59,7 +59,15 @@ The precise geometry, projection and behavior when the sun is outside the visibl
 
 The user requested exploration of an optional weather-responsive background: subtle rain or snow effects, or a sunny treatment, as a visual cue to expected weather. This is a prototype candidate; first-release inclusion and default settings remain undecided.
 
-Evaluate the effect behind a stable, readable prayer foreground, with a static/off option and reduced-motion behavior. Keep an explicit text forecast and its time window so the background does not imply rain is occurring now when it represents later conditions. Proposed safeguards are to use a neutral background when forecast data is stale/unavailable and to keep weather styling separate from the sun's astronomical position. Forecast horizon, condition-selection rules, intensity and fallback policy require agreement in the weather/reliability decision.
+The agreed forecast horizon is the next three hours, labelled explicitly. Evaluate the effect behind a stable, readable prayer foreground, with a static/off option and reduced-motion behavior. Keep an explicit text forecast and its time window so the background does not imply rain is occurring now when it represents later conditions. Proposed safeguards are to use a neutral background when forecast data is stale/unavailable and to keep weather styling separate from the sun's astronomical position. Condition-selection rules, intensity and fallback policy require agreement in the weather/reliability decision.
+
+## Requested moon and fasting context
+
+The user requested a moon-phase visual with the percentage illuminated and full-moon context, an indication of whether the White Days are approaching or current, and optional advance reminders for Monday/Thursday fasting. The explicit examples are a Sunday reminder for Monday and a Wednesday reminder for Thursday. Present these as voluntary observances, not commands to fast.
+
+The moon visual and observance labels must have separately defined data sources and meanings. Lunar/fasting research will establish the distinction between astronomical phase and calendar dates; the human decision must choose the Hijri calendar, local adjustment behavior, reminder lead time/window, sunset versus civil-day wording, exceptional-date handling and first-release placement. Do not derive observance dates from an arbitrary illumination-percentage threshold or change the physical moon depiction to match a calendar badge.
+
+This requested context supplements the agreed prayer/sun hierarchy and visible schedule. It does not bring dedicated Ramadan/Taraweeh layouts into the first release. Exact visual treatment belongs to the prototype after calendar/reminder behavior is agreed.
 
 ## Decisions required before implementation
 
@@ -74,6 +82,8 @@ Evaluate the effect behind a stable, readable prayer foreground, with a static/o
 | Actual visual composition and behavior | [Large-screen visual prototype](https://github.com/Today20092/OpenMasjidDisplay/issues/7) |
 | Setup, storage, offline use, weather failure, and recovery | [Reliability contract](https://github.com/Today20092/OpenMasjidDisplay/issues/8) |
 | Weather design inspiration and public forecast capabilities | [Weather signage research](https://github.com/Today20092/OpenMasjidDisplay/issues/11) |
+| Astronomical moon phase versus voluntary-fasting calendar dates | [Lunar and fasting research](https://github.com/Today20092/OpenMasjidDisplay/issues/12) |
+| Hijri calendar and optional reminder behavior | [Moon and reminder policy](https://github.com/Today20092/OpenMasjidDisplay/issues/13) |
 | Final acceptance scenarios, distribution, and license | [Specification readiness](https://github.com/Today20092/OpenMasjidDisplay/issues/9) |
 
 A web app is the leading platform candidate. No framework, component toolkit, prayer calculation library, weather provider, or hosting service has been selected.
