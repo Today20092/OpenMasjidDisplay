@@ -35,7 +35,7 @@ Breezy Weather is a user-supplied design reference and NWS is a proposed data so
 
 ## Confirmed prayer behavior
 
-Recorded during [What exactly do prayer times, next prayer, and sun markers mean?](https://github.com/Today20092/OpenMasjidDisplay/issues/6), which remains open:
+Agreed in [What exactly do prayer times, next prayer, and sun markers mean?](https://github.com/Today20092/OpenMasjidDisplay/issues/6):
 
 - Show prayer start and iqamah together in the prominent prayer summary when iqamah is enabled. Do not hide either time as the next event changes; people need both to plan their arrival.
 - Keep the prominent prayer until its iqamah time, then advance directly to the next prayer without a congregation-starting message. When iqamah is disabled, advance at prayer start.
@@ -48,10 +48,10 @@ Recorded during [What exactly do prayer times, next prayer, and sun markers mean
 - Make iqamah optional. With it disabled, show prayer start times without an empty iqamah column or iqamah-only labels.
 - Preserve the previously agreed per-prayer iqamah offset or fixed-clock-time options.
 - Support a configurable list of optional Jumu'ah services on Fridays. Each service has a "Khutbah starts" time and can have its own iqamah time. Support one or several services, including three or more, rather than a single mosque-wide Friday iqamah. When none is configured, including displays outside a mosque, use the ordinary Dhuhr schedule.
-- Keep every configured Friday service visible. The proposed headline sequence follows each upcoming khutbah and optional iqamah, then the next daily prayer; visibility is explicitly confirmed, while the transition sequence still needs final confirmation.
+- Keep every configured Friday service visible. The headline follows each upcoming khutbah and optional iqamah, then the next daily prayer, using the agreed next-event behavior.
 - After Isha's iqamah, or Isha start when iqamah is disabled, show "Tomorrow's Fajr" prominently. Keep today's full schedule until midnight in the configured location's time zone; at midnight switch the schedule to the new day and remove the "Tomorrow" label.
 
-Timetable import has not been selected for the first release. Concrete calculation options, high-latitude prayer policy and Friday headline transitions remain to be resolved. Clock verification belongs to the reliability decision.
+If the selected calculation method cannot produce a prayer time, flag the missing time and let the mosque enter its approved time manually. Do not silently change methods or invent a time. The user accepted this fallback. The concrete calculation library and supported preset catalog are technical selections to validate against these rules. Timetable import has not been selected for the first release. Clock verification belongs to the reliability decision.
 
 ## Solar visualization direction
 
