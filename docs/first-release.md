@@ -27,7 +27,7 @@ Recorded in [What should the first display help someone understand at a glance?]
 - Next-prayer information is the first thing viewers should notice, alongside a prominent visualization of the sun's current position. The sun view should help answer whether sunrise or sunset is approaching or it is the middle of the day.
 - The remaining-time countdown is secondary to the prayer information and sun view.
 - Keep the complete daily prayer schedule visible. When iqamah is enabled, each row distinguishes prayer start time from iqamah time.
-- Each mosque can configure iqamah for each prayer as an offset from the prayer start time, such as 10 or 20 minutes, or a fixed clock time. Validation rules remain part of the prayer semantics decision.
+- Each mosque can configure iqamah for each prayer as an offset from the prayer start time, such as 10 or 20 minutes, or a fixed clock time. Flag invalid schedules before saving and explain what needs correction.
 - Give weather and the notice quiet, dedicated areas. They must not replace or obscure prayer information.
 - Weather should help viewers plan the day, prioritizing likely rain and useful heat/cold context. The user requested investigation of unusual temperatures; any comparison with normal conditions requires an evidenced baseline.
 
@@ -41,13 +41,17 @@ Recorded during [What exactly do prayer times, next prayer, and sun markers mean
 - Keep the prominent prayer until its iqamah time, then advance directly to the next prayer without a congregation-starting message. When iqamah is disabled, advance at prayer start.
 - The secondary countdown targets prayer start first, then iqamah, with an explicit target label. Both absolute times remain visible in the prominent summary when iqamah is enabled.
 - Calculate prayer start times from a location and user-selected calculation settings. Permit individual adjustments to match the mosque's approved timetable.
+- Show the selected calculation method in setup and allow users to change it. The concrete supported method catalog and calculation library remain technical selections, not a single convention imposed on all mosques.
+- Use the configured display location's time zone, including its daylight-saving rules, even when the computer uses a different time zone. A wrong device clock is a separate reliability problem; selecting coordinates or a time zone does not establish the current instant.
+- Flag invalid schedules before saving, such as an iqamah before its prayer start, and explain how to correct them.
 - Support location lookup and exact latitude/longitude entry. A location-search provider and its offline behavior remain implementation decisions.
 - Make iqamah optional. With it disabled, show prayer start times without an empty iqamah column or iqamah-only labels.
 - Preserve the previously agreed per-prayer iqamah offset or fixed-clock-time options.
 - Support a configurable list of optional Jumu'ah services on Fridays. Each service has a "Khutbah starts" time and can have its own iqamah time. Support one or several services, including three or more, rather than a single mosque-wide Friday iqamah. When none is configured, including displays outside a mosque, use the ordinary Dhuhr schedule.
+- Keep every configured Friday service visible. The proposed headline sequence follows each upcoming khutbah and optional iqamah, then the next daily prayer; visibility is explicitly confirmed, while the transition sequence still needs final confirmation.
 - After Isha's iqamah, or Isha start when iqamah is disabled, show "Tomorrow's Fajr" prominently. Keep today's full schedule until midnight in the configured location's time zone; at midnight switch the schedule to the new day and remove the "Tomorrow" label.
 
-Timetable import has not been selected for the first release. Calculation-method options, time-zone setup and daylight-saving behavior, validation, Friday service transitions and missing solar-event behavior remain to be resolved.
+Timetable import has not been selected for the first release. Concrete calculation options, high-latitude prayer policy, Friday headline transitions and missing solar-event presentation remain to be resolved. Clock verification belongs to the reliability decision.
 
 ## Solar visualization direction
 
