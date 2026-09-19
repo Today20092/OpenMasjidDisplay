@@ -75,6 +75,12 @@ The moon visual and observance labels have separate meanings. [Lunar research](h
 
 This requested context supplements the agreed prayer/sun hierarchy and visible schedule. It does not bring dedicated Ramadan/Taraweeh layouts into the first release. Exact visual treatment belongs to the prototype after calendar/reminder behavior is agreed.
 
+## Visual direction after the first prototype review
+
+The user preferred A and B, especially B's prominent upper-right solar chart. C placed too much emphasis on the name of tomorrow's prayer. Refine B's composition with a larger solar view, reduce the prayer name's dominance, and retain dark and light treatments informed by A and B.
+
+The user requested an analog representation of the remaining time instead of relying only on a digital duration. The next prototype explores a 12-hour clock with a shaded interval from now to the upcoming event and a target dot. This particular analog design is a proposal awaiting visual feedback; absolute prayer-start and iqamah times stay visible.
+
 ## Decisions required before implementation
 
 | Question | Authoritative ticket |
