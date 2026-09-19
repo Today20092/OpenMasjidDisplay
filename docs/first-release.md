@@ -79,7 +79,7 @@ This requested context supplements the agreed prayer/sun hierarchy and visible s
 
 The user preferred A and B, especially B's prominent upper-right solar chart. C placed too much emphasis on the name of tomorrow's prayer. Refine B's composition with a larger solar view, reduce the prayer name's dominance, and retain dark and light treatments informed by A and B.
 
-The user approved the refined solar-led direction with a shrinking horizontal remaining-time bar, rather than a clock face. Absolute prayer-start and iqamah times and the full schedule stay visible. Friday-service layout still needs review.
+The user approved the refined solar-led direction with a shrinking horizontal remaining-time bar, rather than a clock face. Absolute prayer-start and iqamah times and the full schedule stay visible. The user also approved the three-service Friday layout: all khutbah/iqamah pairs beside the solar chart, with the daily schedule below. This approves the visual direction; physical TV viewing-distance validation and later Friday transition checks remain implementation validation work.
 
 Additional color themes are a requested future feature. The current light and dark palettes are the starting point, not the complete theme selection. Future themes should preserve text contrast and the same information hierarchy; a theme editor is not part of the first release.
 
