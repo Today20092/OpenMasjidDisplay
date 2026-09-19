@@ -44,9 +44,10 @@ Recorded during [What exactly do prayer times, next prayer, and sun markers mean
 - Support location lookup and exact latitude/longitude entry. A location-search provider and its offline behavior remain implementation decisions.
 - Make iqamah optional. With it disabled, show prayer start times without an empty iqamah column or iqamah-only labels.
 - Preserve the previously agreed per-prayer iqamah offset or fixed-clock-time options.
-- Support an optional configured Jumu'ah time on Fridays. When it is not configured, use the ordinary Dhuhr schedule. The meaning of the configured Friday time and support for multiple services remain to be settled.
+- Support optional Jumu'ah services on Fridays, explicitly labelled "Khutbah starts", including multiple services. When none is configured, use the ordinary Dhuhr schedule. How separate Friday iqamah times appear remains to be settled.
+- After Isha's iqamah, or Isha start when iqamah is disabled, show "Tomorrow's Fajr" prominently. Keep today's full schedule until midnight in the configured location's time zone; at midnight switch the schedule to the new day and remove the "Tomorrow" label.
 
-Timetable import has not been selected for the first release. Calculation-method options, time-zone behavior, overnight rollover, Friday details and solar/night semantics remain to be resolved.
+Timetable import has not been selected for the first release. Calculation-method options, time-zone setup and daylight-saving behavior, Friday iqamah details, validation and solar/night semantics remain to be resolved.
 
 ## Decisions required before implementation
 
