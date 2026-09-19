@@ -69,7 +69,9 @@ The agreed forecast horizon is the next three hours, labelled explicitly. Evalua
 
 ## Requested moon and fasting context
 
-Confirmed calendar approach: calculate the moon graphic, illuminated percentage and full-moon notices astronomically. Determine White Days reminders from dates 13, 14 and 15 in the selected Hijri calendar, with adjustment to match the mosque's calendar. Do not assign the astronomical full-moon date to Hijri day 14 or derive fasting dates from illumination. Specific calendar options and default, adjustment controls, and reminder timing remain to be specified.
+Confirmed calendar approach: calculate the moon graphic, illuminated percentage and full-moon notices astronomically. Determine White Days reminders from dates 13, 14 and 15 in the selected Hijri calendar, with adjustment to match the mosque's calendar. Do not assign the astronomical full-moon date to Hijri day 14 or derive fasting dates from illumination. Specific calendar options and default and adjustment controls remain to be specified.
+
+The user approved a White Days advance notice one day before the sequence begins, followed by an indicator on each current White Day. Include the explicit weekday and civil date alongside relative wording such as "tomorrow" to reduce sunset-related ambiguity. Use the configured display location's time zone. Exact sunset-to-fasting-day mapping and exceptional-date behavior still need specification.
 
 The user requested a moon-phase visual with the percentage illuminated and full-moon context, an indication of whether the White Days are approaching or current, and optional advance reminders for Monday/Thursday fasting. The explicit examples are a Sunday reminder for Monday and a Wednesday reminder for Thursday. Present these as voluntary observances, not commands to fast.
 
