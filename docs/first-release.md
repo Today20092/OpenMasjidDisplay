@@ -120,6 +120,10 @@ Remote editing, multi-screen syncing, and wide banner layouts are outside the fi
 
 Future seasonal layouts should support Ramadan and mosque-specific activities such as Taraweeh. The user explicitly wants these later; the first release does not include dedicated Ramadan/Taraweeh layouts.
 
+## Setup and offline behavior
+
+The user approved saving settings locally on the display computer, keeping prayer times working without internet after initial setup, and providing a settings backup file for export and restoration. Weather must clearly indicate stale data. Exact browser support, offline reload requirements, startup/sleep behavior, clock reliability, and weather freshness thresholds remain to be settled in the setup decision.
+
 ## Ready-to-build gate
 
 Resolve the linked human decisions, record the selected design and data sources, agree distribution and license, and replace proposed checks with testable acceptance criteria. The user then reviews the specification in the readiness ticket. Research completion alone does not satisfy this gate.
