@@ -19,6 +19,10 @@ Append `&check=1` to run the small built-in behavior checks, or run `runChecks()
 
 The user must judge layout and viewing-distance readability before the visual decision resolves. Do not promote this code directly into production.
 
+## Friday preview
+
+Select “Friday · 3 services” or use `?variant=A&scene=friday`. Three khutbah starts and optional iqamah times appear together, with the solar chart and five daily prayer-start times retained. Ordinary Dhuhr iqamah is omitted in this mosque example. This is a fixed pre-khutbah sample; later Friday transitions are not simulated. Built-in checks cover the three service rows. Inspected dark Friday rendering and verified countdown/schedule separation.
+
 ## Second-review verification
 
 Built-in checks pass for both refined variants and all three scenes, including the four analog intervals. Inspected the short afternoon wedge and the overnight wedge. At a 1920x1080 CSS viewport, both variants retain all five prayer entries with iqamah disabled, a long notice and unavailable weather; measured hero/schedule/context/notice bounds do not overlap. Physical TV viewing-distance readability still needs human review.
